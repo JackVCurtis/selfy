@@ -21,6 +21,14 @@ class SelfiesController < ApplicationController
     end
   end
 
+  def destroy
+    @selfy = Selfy.find(params[:id])
+
+    if @selfy.destroy
+      redirect_to "/"
+    end
+  end
+
   private
 
   def selfy_params
