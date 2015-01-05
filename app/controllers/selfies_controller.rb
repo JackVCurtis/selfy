@@ -27,7 +27,7 @@ class SelfiesController < ApplicationController
     if @selfy.update(selfy_params)
       redirect_to "/"
     else
-      redirect_to edit_selfy_path(@selfy)
+      render :edit
     end
   end
 
