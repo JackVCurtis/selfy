@@ -11,6 +11,15 @@ class SelfiesController < ApplicationController
     @selfy = Selfy.new
   end
 
+  def create
+    @selfy = Selfy.new(selfy_params)
+
+    if @selfy.save
+      redirect_to "/"
+    else
+      render :new
+    end
+  end
 
   private
 
