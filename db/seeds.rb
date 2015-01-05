@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+selfie = Selfy.create(body: "Abstract work, if one wishes to do it well, must be allowed to destroy ones humanity.")

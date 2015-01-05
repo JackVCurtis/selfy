@@ -1,3 +1,3 @@
-class Selfie < ActiveRecord::Base
+class Selfy < ActiveRecord::Base
   validates :body, presence: true
 end
