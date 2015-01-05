@@ -3,12 +3,12 @@ class SelfiesController < ApplicationController
     @selfies = Selfy.all
   end
 
-  def show
-    @selfy = Selfy.find(params[:id])
-  end
-
   def new
     @selfy = Selfy.new
+  end
+
+  def edit
+    @selfy = Selfy.find(params[:id])
   end
 
   def create
@@ -18,6 +18,16 @@ class SelfiesController < ApplicationController
       redirect_to "/"
     else
       render :new
+    end
+  end
+
+  def update
+    @selfy = Selfy.find(params[:id])
+
+    if @selfy.update(selfy_params)
+      redirect_to "/"
+    else
+      redirect_to edit_selfy_path(@selfy)
     end
   end
 
