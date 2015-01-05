@@ -1,5 +1,7 @@
 <h1>Selfies</h1>
 
+<h2><%= link_to 'New Selfy', new_selfy_path %></h2>
+
 <ul>
 <% @selfies.each do |selfy| %>
   <li><%= selfy.body %></li>
